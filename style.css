@@ -72,3 +72,59 @@
         font-size: 22px;
       }
     }
+
+/* ===== RSVP SECTION ===== */
+
+#rsvpForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+#rsvpForm input,
+#rsvpForm select,
+#rsvpForm textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-family: 'Poppins', sans-serif;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+#rsvpForm input:focus,
+#rsvpForm select:focus,
+#rsvpForm textarea:focus {
+  border-color: #d4a373;
+  box-shadow: 0 0 0 3px rgba(212,163,115,0.2);
+}
+
+#rsvpForm textarea {
+  resize: none;
+  min-height: 100px;
+}
+
+#rsvpForm button {
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #d4a373;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#rsvpForm button:hover {
+  background: #b5835a;
+  transform: translateY(-2px);
+}
+
+#status {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #4CAF50;
+  font-weight: 500;
+}
