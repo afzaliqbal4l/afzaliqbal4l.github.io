@@ -119,7 +119,7 @@ form.addEventListener("submit", async function(e) {
     ucapan: document.getElementById("ucapan").value
   };
   
-  const response = await fetch("YOUR_WEB_APP_URL", {
+  const response = await fetch("[YOUR_WEB_APP_URL](https://script.google.com/macros/s/AKfycby41dUVYN9x_BJjbmN9YO1xExP3rIjdxfxOLDfaC7P15ydB5vXdeGPEMgKqYr44-bC3dA/exec)", {
     method: "POST",
     body: JSON.stringify(data)
   });
