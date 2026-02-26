@@ -44,6 +44,29 @@
     <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
   </section>
 
+  <section>
+  <div class="card">
+    <h2>RSVP</h2>
+    <form id="rsvpForm">
+      <input type="text" id="nama" placeholder="Nama Anda" required><br><br>
+      
+      <select id="kehadiran" required>
+        <option value="">Konfirmasi Kehadiran</option>
+        <option value="Hadir">Hadir</option>
+        <option value="Tidak Hadir">Tidak Hadir</option>
+      </select><br><br>
+      
+      <input type="number" id="jumlah" placeholder="Jumlah Tamu" min="1"><br><br>
+      
+      <textarea id="ucapan" placeholder="Ucapan & Doa"></textarea><br><br>
+      
+      <button type="submit">Kirim</button>
+    </form>
+    
+    <p id="status"></p>
+  </div>
+</section>
+
   <footer>
     © 2026 Afzal & Pasangan
   </footer>
@@ -74,15 +97,40 @@
     }, 1000);
 
     const params = new URLSearchParams(window.location.search);
-const nama = params.get("to");
+  const nama = params.get("to");
 
-const namaTamuElement = document.getElementById("namaTamu");
+  const namaTamuElement = document.getElementById("namaTamu");
 
-if (nama) {
-  namaTamuElement.textContent = decodeURIComponent(nama);
-} else {
-  namaTamuElement.textContent = "Tamu Undangan";
-}
+  if (nama) {
+    namaTamuElement.textContent = decodeURIComponent(nama);
+  } else {
+    namaTamuElement.textContent = "Tamu Undangan";
+  }
+
+const form = document.getElementById("rsvpForm");
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+  
+  const data = {
+    nama: document.getElementById("nama").value,
+    kehadiran: document.getElementById("kehadiran").value,
+    jumlah: document.getElementById("jumlah").value,
+    ucapan: document.getElementById("ucapan").value
+  };
+  
+  const response = await fetch("YOUR_WEB_APP_URL", {
+    method: "POST",
+    body: JSON.stringify(data)
+  });
+  
+  const result = await response.json();
+  
+  document.getElementById("status").textContent = "Terima kasih atas konfirmasi Anda.";
+  
+  form.reset();
+});
+  
 </script>
 
 </body>
