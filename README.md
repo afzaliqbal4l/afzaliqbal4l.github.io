@@ -48,7 +48,7 @@
   <div class="card">
     <h2>RSVP</h2>
     <form id="rsvpForm">
-      <input type="text" id="nama" placeholder="Nama Anda" required><br><br>
+      <input type="text" id="nama" placeholder="Nama Anda" readonly><br><br>
       
       <select id="kehadiran" required>
         <option value="">Konfirmasi Kehadiran</option>
@@ -96,16 +96,21 @@
         seconds + " Detik";
     }, 1000);
 
-    const params = new URLSearchParams(window.location.search);
-  const nama = params.get("to");
+   const params = new URLSearchParams(window.location.search);
+const nama = params.get("to");
 
-  const namaTamuElement = document.getElementById("namaTamu");
+const namaTamuElement = document.getElementById("namaTamu");
+const inputNama = document.getElementById("nama");
 
-  if (nama) {
-    namaTamuElement.textContent = decodeURIComponent(nama);
-  } else {
-    namaTamuElement.textContent = "Tamu Undangan";
-  }
+if (nama) {
+  const decodedNama = nama; // URLSearchParams sudah decode otomatis
+  
+  namaTamuElement.textContent = decodedNama;
+  inputNama.value = decodedNama;   // ← otomatis isi input
+} else {
+  namaTamuElement.textContent = "Tamu Undangan";
+  inputNama.value = "";
+}
 
 const form = document.getElementById("rsvpForm");
 
