@@ -50,8 +50,7 @@
     <form id="rsvpForm">
       <input type="text" id="nama" placeholder="Nama Anda" readonly><br><br>
       
-      <select id="kehadiran" required>
-        <option value="">Konfirmasi Kehadiran</option>
+      <select id="kehadiran" placeholder="Konfirmasi Kehadiran" required>
         <option value="Hadir">Hadir</option>
         <option value="Tidak Hadir">Tidak Hadir</option>
       </select><br><br>
