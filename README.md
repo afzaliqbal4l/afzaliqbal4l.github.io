@@ -11,6 +11,8 @@
 
   <header>
     <h1>Undangan Pernikahan</h1>
+    <p>Kepada Yth:</p>
+    <h2 id="namaTamu"></h2>
     <p>Dengan memohon rahmat dan ridho Tuhan Yang Maha Esa</p>
   </header>
 
@@ -70,6 +72,17 @@
         minutes + " Menit " +
         seconds + " Detik";
     }, 1000);
+
+    const params = new URLSearchParams(window.location.search);
+const nama = params.get("to");
+
+const namaTamuElement = document.getElementById("namaTamu");
+
+if (nama) {
+  namaTamuElement.textContent = decodeURIComponent(nama);
+} else {
+  namaTamuElement.textContent = "Tamu Undangan";
+}
 </script>
 
 </body>
