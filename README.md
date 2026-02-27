@@ -41,6 +41,21 @@
   </section>
 
   <section>
+  <div class="card">
+    <h2>Lokasi Acara</h2>
+    <div class="map-container">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.7228318045686!2d106.8357914750373!3d-6.167857993819407!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f5c8f32236c7%3A0xb92a4e0c561e6630!2sDirektorat%20Sistem%20Informasi%20dan%20Teknologi%20Perbendaharaan!5e0!3m2!1sid!2sid!4v1772164547345!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        width="100%" 
+        height="300" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <section>
     <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
   </section>
 
