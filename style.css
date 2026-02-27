@@ -128,3 +128,11 @@
   color: #4CAF50;
   font-weight: 500;
 }
+
+#kehadiran:invalid {
+  color: #888;
+}
+
+#kehadiran option {
+  color: #000;
+}
